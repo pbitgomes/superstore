@@ -15,14 +15,14 @@ const productSchema = new Schema({
     type: String,
     enum: ["Móveis", "Plantas", "Ferramentas"],
   },
-// orders: [
-//   objectId("123vdsfbsdfvsdf"),
-//   objectId("dnviluebvln12")
-// ]
+  // orders: [
+  //   objectId("123vdsfbsdfvsdf"),
+  //   objectId("dnviluebvln12")
+  // ]
   orders: [
     {
       type: Schema.Types.ObjectId,
-      ref: "",
+      ref: "Order",
     },
   ],
 });
